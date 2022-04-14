@@ -1,0 +1,30 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, Name TEXT, Quantity INTEGER, Aisle INTEGER, Price TEXT, Level TEXT);
+
+INSERT INTO store VALUES (10, "Cello", 11, 2, 14, 5);
+INSERT INTO store VALUES (11, "Trumpet", 13, 20, 14, 6);
+INSERT INTO store VALUES (12, "Clarinet", 14, 2, 15, 6);
+INSERT INTO store VALUES (13, "Harp", 6, 7, 16, 2);
+INSERT INTO store VALUES (14, "Orchestral Scores", 15, 2, 26, 5);
+INSERT INTO store VALUES (1, "Chopin", 4, 1, 13, 4);
+INSERT INTO store VALUES (2, "Rachmaninoff", 6, 6, 18, 5);
+INSERT INTO store VALUES (3, "Scriabin", 10, 6, 18, 9);
+INSERT INTO store VALUES (4, "Poulenc", 13, 11, 12, 4);
+INSERT INTO store VALUES (5, "Scarlatti", 20, 2, 14, 10);
+INSERT INTO store VALUES (6, "Beethoven", 14, 5, 13, 9);
+INSERT INTO store VALUES (7, "Grieg", 7, 8, 12, 11);
+INSERT INTO store VALUES (8, "Brahms", 3, 7, 12, 13);
+INSERT INTO store VALUES (9, "Flute", 15, 20, 13, 1);
+SELECT * FROM store;
+SELECT Name, SUM(Price) FROM Store;
+SELECT Name, SUM(Quantity) FROM store;
+
+SELECT Aisle, SUM(Quantity) FROM store GROUP BY aisle;
+SELECT * FROM Store WHERE Price > 15;
+SELECT Name, Price FROM Store WHERE Price ORDER BY Price Desc;
+SELECT Name, Quantity FROM Store WHERE Quantity < 10;
+SELECT Name, Quantity FROM Store WHERE Quantity > 10;
+SELECT MAX(price) FROM Store;
+
+
+
+
