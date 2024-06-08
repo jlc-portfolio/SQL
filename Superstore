@@ -1,0 +1,16 @@
+SELECT * FROM superstore
+ORDER by price DESC;
+
+SELECT SUM(price)
+FROM superstore;
+
+SELECT SUM(price), category
+FROM superstore
+GROUP BY category;
+
+SELECT AVG(average_rating)
+FROM superstore;
+
+SELECT COUNT(category)
+FROM superstore
+WHERE (category)="Electronics"
