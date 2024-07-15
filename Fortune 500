@@ -1,0 +1,7 @@
+SELECT company_name, employees,
+CASE WHEN employees>=10000 THEN "Large"
+WHEN employees>=2000 THEN "Medium"
+ELSE "Small"
+END AS Size
+FROM fortune_companies
+ORDER BY company_name;
